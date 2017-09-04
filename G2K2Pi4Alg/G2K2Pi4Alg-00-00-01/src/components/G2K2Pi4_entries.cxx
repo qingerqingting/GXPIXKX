@@ -1,0 +1,8 @@
+#include "GaudiKernel/DeclareFactoryEntries.h"
+#include "G2K2Pi4Alg/G2K2Pi4.h"
+
+DECLARE_ALGORITHM_FACTORY( G2K2Pi4 )
+
+DECLARE_FACTORY_ENTRIES ( G2K2Pi4Alg ) {
+  DECLARE_ALGORITHM(G2K2Pi4);
+}

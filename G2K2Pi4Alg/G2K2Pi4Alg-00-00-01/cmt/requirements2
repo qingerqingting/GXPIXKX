@@ -1,0 +1,31 @@
+package Gree
+author Fu Jinlin <fujinlin85@gmail.com>
+
+use GaudiInterface  GaudiInterface-*  External
+use BesPolicy       BesPolicy-*
+
+use DstEvent        DstEvent-*        Event
+use EventModel      EventModel-*      Event
+use EvtRecEvent     EvtRecEvent-*     Event
+use EvTimeEvent     EvTimeEvent-*     Event
+use MagneticField   MagneticField-*
+use McTruth         McTruth-*         Event
+use Identifier      Identifier-*      DetectorDescription
+
+use VertexFit       VertexFit-*       Analysis 
+use ParticleID      ParticleID-*      Analysis
+use McCor           McCor-*           Analysis/PhotonCor
+use AbsCor          AbsCor-*          Analysis/PhotonCor
+use GammaConv       GammaConv-*       Analysis
+
+use BesROOT         BesROOT-00-*      External
+use RootCnvSvc      *                 Event
+
+apply_pattern       component_library 
+library   Gree    *.cxx     components/*.cxx 
+
+apply_pattern declare_runtime files=*.txt
+
+private
+macro_append Gree_cppflags " -I${GAUDISVCROOT}/src/JobOptionsSvc "
+macro_append Gree_linkopts " -lGaudiSvc "

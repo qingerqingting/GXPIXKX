@@ -1,0 +1,2 @@
+ApplicationMgr.DLLs += {"G4K2Alg"};
+ApplicationMgr.TopAlg += { "G4K2" };

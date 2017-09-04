@@ -1,0 +1,1 @@
+MC_cxx_dependencies =  ../src/MC.cxx  $(bin)G2Pi2K2Alg_deps/MC_cxx.stamp
